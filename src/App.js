@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Header from './components/Header'
+import ProductContainer from './containers/ProductContainer'
+import Toolbar from './components/Toolbar'
+import './App.scss'
 
 function App() {
-
-  const [face, setFace] = useState()
-
-  useEffect(() => {
-    fetch("http://localhost:3000/api/products")
-    .then(res=> res.json())
-    .then((data)=> {
-      setFace(data[0].face)
-    })
-  }, [])
  
   return (
     <div className="App">
-      <p>Hello!</p>
-      {face}
+      <Header />
+      <Toolbar />
+      <ProductContainer />
     </div>
   );
 }

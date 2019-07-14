@@ -1,0 +1,21 @@
+#product-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: lightgreen;
+  width: 900px;
+  align-items: center;
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  #product-container {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  #product-container {
+    width: 215px;
+  }
+}
